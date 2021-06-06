@@ -1,27 +1,30 @@
 {
-  "name": "mini-youtube-graphql",
+  "name": "apollo-upload",
   "version": "1.0.0",
-  "main": "index.js",
-  "license": "MIT",
+  "description": "Comprehensive guide on how to upload files with apollo-server and mongodb(a few tweaks can make it work for any database)",
+  "main": "src/index.js",
   "scripts": {
-    "start": "node server.js",
-    "dev": "nodemon server.js"
+    "dev": "nodemon src/index.js",
+    "start": "node src/index.js"
   },
+  "keywords": [
+    "file-uploads",
+    "graphql",
+    "uploads",
+    "apollo",
+    "upload"
+  ],
+  "author": "Divine Hycenth",
+  "license": "MIT",
   "dependencies": {
-    "body-parser": "^1.19.0",
+    "apollo-server": "^2.11.0",
     "chalk": "^4.1.0",
-    "cookie-parser": "^1.4.5",
-    "cors": "^2.8.5",
-    "dotenv": "^8.2.0",
-    "express": "^4.17.1",
-    "express-graphql": "^0.12.0",
-    "graphql": "^15.4.0",
-    "graphql-tools": "^7.0.2",
-    "graphql-upload": "^11.0.0",
-    "mongoose": "^5.12.3"
+    "graphql": "^14.6.0",
+    "mongoose": "5.11.15",
+    "shortid": "^2.2.15"
   },
   "devDependencies": {
-    "nodemon": "^2.0.7",
-    "sequelize-cli": "^6.2.0"
+    "esm": "^3.2.25",
+    "nodemon": "^2.0.2"
   }
 }

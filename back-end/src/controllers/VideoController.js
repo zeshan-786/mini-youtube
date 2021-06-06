@@ -12,7 +12,9 @@ module.exports = {
     if (page > 1) {
       skip = (page - 1) * limit;
     }
-    return await VideoModel.find({}).limit(limit).skip(skip);
+    const total = await VideoModel.find({}).countDocuments()
+    const data = await VideoModel.find({}).limit(limit).skip(skip)
+    return { totalPages: Math.ceil(total/limit),current: page, videos: data }
   },
 
   showVideo: async ({ id }) => {
